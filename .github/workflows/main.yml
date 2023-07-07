@@ -15,7 +15,7 @@ jobs:
 
       - name: Update manifest file
         run: |
-          sed -i 's/my-docker-registry\/my-react-app:latest/my-docker-registry\/my-react-app:${{ github.sha }}/g' my-react-app/myapp.yaml
+          sed -i 's/my-docker-registry\/my-react-app:latest/my-docker-registry\/my-react-app:${{ github.sha }}/g' skaffold.yaml
           git config --global user.email "gagan4580@yahoo.com"
           git config --global user.name "gagan4580"
           git add .
