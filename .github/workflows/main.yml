@@ -22,7 +22,7 @@ jobs:
 
       - name: Login to ArgoCD
         run: |
-          argocd login 127.0.0.1:8081 --username admin --password eH0QS0KqhY52ZF4B --insecure
+          argocd login localhost:8081 --username admin --password eH0QS0KqhY52ZF4B --insecure
 
       - name: Sync application
         run: |
