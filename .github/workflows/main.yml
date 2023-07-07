@@ -13,16 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Update manifest file
-        run: |
-          sed -i 's/my-docker-registry\/my-react-app:latest/my-docker-registry\/my-react-app:${{ github.sha }}/g' skaffold.yaml
-          git config --global user.email "gagan4580@yahoo.com"
-          git config --global user.name "gagan4580"
-          git add .
-          git commit -m "Update image tag"
-          git push origin main
-        env:
-          GITHUB_TOKEN: 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 
+
 
       - name: Install ArgoCD cli
         run: |
